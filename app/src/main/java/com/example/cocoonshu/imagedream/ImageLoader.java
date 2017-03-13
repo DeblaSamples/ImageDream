@@ -78,7 +78,7 @@ public class ImageLoader extends AsyncTask<Void, Float, Void>{
         Cursor cursor = resolver.query(
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                 new String[] {MediaStore.Images.ImageColumns.DATA},
-                MediaStore.Images.ImageColumns.MIME_TYPE + " IN (?, ?, ?, ?) AND _data like '%DCIM/ImageDreamer/%'",
+                MediaStore.Images.ImageColumns.MIME_TYPE + " IN (?, ?, ?, ?) ",
                 new String[] {"image/jpg", "image/jpe", "image/jpeg", "image/png"},
                 MediaStore.Images.ImageColumns.DATE_TAKEN + " DESC ");
         if (cursor != null) {
